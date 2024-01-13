@@ -6,7 +6,9 @@
 */
 
 function findLargestElement(numbers) {
-    
+  // using inbuild method: spread the array, and use Math.max
+  // returning undefined if array is empty
+  return numbers.length > 0 ? Math.max(...numbers) : undefined;
 }
 
 module.exports = findLargestElement;
