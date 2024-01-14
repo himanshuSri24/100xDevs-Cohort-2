@@ -4,7 +4,13 @@
 */
 
 function isPalindrome(str) {
-  return true;
+  // create a regex that looks for all non-alphabetical characters
+  const regex = /[^A-Za-z]/g;
+  // remove all non-alphabetical characters from the string and convert it to lowercase
+  const newStr = str.toLowerCase().replace(regex, "");
+  // now, check and see if the string is the same forwards and backwards
+  const newStrReverse = newStr.split("").reverse().join("");
+  return newStr === newStrReverse;
 }
 
 module.exports = isPalindrome;
